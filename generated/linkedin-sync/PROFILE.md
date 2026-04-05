@@ -20,7 +20,7 @@ Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplica
 ## Experience
 
 ### Systems Project Specialist · ENACAL
-- Período: Julio 2024 - Febrero 2026
+- Período: Julio 2024 - Actualidad
 - Ubicación: Managua, Nicaragua
 - Resumen: Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.
 - Stack: .NET 8/9, REST APIs, JWT, React, Tailwind CSS, IIS

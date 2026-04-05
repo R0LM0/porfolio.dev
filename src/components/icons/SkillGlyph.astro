@@ -1,0 +1,117 @@
+---
+interface Props {
+  label: string;
+  class?: string;
+}
+
+const { label, class: className = "size-8" } = Astro.props;
+const normalized = label.toLowerCase();
+const isFrontend = ["vite", "react", "angular", "typescript"].some((token) =>
+  normalized.includes(token),
+);
+const isMobile = ["flutter", "dart", "android", "offline-first"].some((token) =>
+  normalized.includes(token),
+);
+const isBackend = [".net", "asp.net", "nest", "rest"].some((token) =>
+  normalized.includes(token),
+);
+const isData = ["postgres", "mysql", "sql server", "cloudflare"].some((token) =>
+  normalized.includes(token),
+);
+
+const initials = label
+  .split(/[\s/.-]+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((part) => part[0]?.toUpperCase())
+  .join("");
+---
+
+<span
+  class={`inline-flex ${className} items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-white shadow-[0_10px_30px_-16px_rgba(15,23,42,0.9)]`}
+>
+  {
+    isFrontend && (
+      <svg
+        viewBox="0 0 48 48"
+        class="size-full"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="10" y="10" width="28" height="28" rx="10" class="opacity-15 fill-cyan-400/20 stroke-cyan-300/60" />
+        <path d="M17 28 24 14l7 14h-4l-3-7-3 7h-4Z" class="stroke-cyan-100" />
+        <path d="M16 33h16" class="stroke-cyan-200/80" />
+      </svg>
+    )
+  }
+  {
+    isMobile && (
+      <svg
+        viewBox="0 0 48 48"
+        class="size-full"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="13" y="8" width="22" height="32" rx="6" class="fill-violet-400/20 stroke-violet-200/70" />
+        <path d="M19 18h10" class="stroke-violet-100" />
+        <path d="M18 24h12" class="stroke-violet-100" />
+        <path d="M19 30h7" class="stroke-violet-100" />
+        <path d="M29 20l4 4-4 4" class="stroke-violet-300/90" />
+      </svg>
+    )
+  }
+  {
+    isBackend && (
+      <svg
+        viewBox="0 0 48 48"
+        class="size-full"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <rect x="10" y="10" width="28" height="28" rx="8" class="fill-rose-400/20 stroke-rose-200/70" />
+        <path d="M17 18h7l-4 4 4 4h-7Z" class="stroke-rose-100" />
+        <path d="M28 18h4" class="stroke-rose-100" />
+        <path d="M28 24h4" class="stroke-rose-100" />
+        <path d="M28 30h4" class="stroke-rose-100" />
+      </svg>
+    )
+  }
+  {
+    isData && (
+      <svg
+        viewBox="0 0 48 48"
+        class="size-full"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <ellipse cx="24" cy="13" rx="13" ry="6" class="fill-emerald-400/20 stroke-emerald-200/70" />
+        <path d="M11 13v16c0 3.3 5.8 6 13 6s13-2.7 13-6V13" class="stroke-emerald-100" />
+        <path d="M11 21c0 3.3 5.8 6 13 6s13-2.7 13-6" class="stroke-emerald-100/80" />
+        <path d="M11 29c0 3.3 5.8 6 13 6s13-2.7 13-6" class="stroke-emerald-100/70" />
+      </svg>
+    )
+  }
+  {
+    !isFrontend && !isMobile && !isBackend && !isData && (
+      <span class="text-base font-semibold tracking-[0.18em] text-white/90">
+        {initials}
+      </span>
+    )
+  }
+</span>

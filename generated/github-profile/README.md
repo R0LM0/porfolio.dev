@@ -63,7 +63,7 @@ Persistencia, despliegue y operación en entornos reales con foco en estabilidad
     <td width="22"><strong>▹</strong></td>
     <td>
       <strong>Systems Project Specialist</strong><br />
-      <sub>ENACAL · Julio 2024 - Febrero 2026 · Managua, Nicaragua</sub><br />
+      <sub>ENACAL · Julio 2024 - Actualidad · Managua, Nicaragua</sub><br />
       Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.
     </td>
   </tr>
