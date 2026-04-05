@@ -106,6 +106,6 @@ Persistencia, despliegue y operación en entornos reales con foco en estabilidad
 - **LinkedIn:** https://www.linkedin.com/in/lenin-gilberto-osorio-martinez-680481324/
 - **GitHub:** https://github.com/R0LM0
 - **Email:** rolmo33@yahoo.es
-- **CV:** https://r0lm0.dev/api/cv.pdf
+- **CV:** https://r0lm0.dev/documents/lenin-osorio-cv-2026.pdf
 
 > Code is like humor. When you have to explain it, it's bad.

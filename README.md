@@ -7,7 +7,7 @@ Portfolio estático en Astro + pnpm, pensado para correr rápido, mantenerse fá
 - Astro
 - Tailwind CSS
 - Componentes `.astro`
-- Endpoint estático para descarga de CV (`/api/cv.pdf`)
+- Archivo estático para descarga de CV (`/documents/lenin-osorio-cv-2026.pdf`)
 
 ## Scripts
 
@@ -65,7 +65,7 @@ Ahí podés cambiar:
 
 - Avatar: `D:\WORKSPACES\PORTFOLIO\porfolio.dev\public\images\profile\avatar.jpg`
 - Imágenes de proyectos: `D:\WORKSPACES\PORTFOLIO\porfolio.dev\public\images\projects\`
-- CV fuente del endpoint: `D:\WORKSPACES\PORTFOLIO\porfolio.dev\src\assets\documents\lenin-osorio-cv-2026.pdf`
+- CV público descargable: `D:\WORKSPACES\PORTFOLIO\porfolio.dev\public\documents\lenin-osorio-cv-2026.pdf`
 
 ## Estructura
 
