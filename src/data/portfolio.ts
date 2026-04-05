@@ -1,4 +1,4 @@
-﻿import source from "./profile-source.json";
+import source from "./profile-source.json";
 
 export interface NavItem {
   label: string;
@@ -50,6 +50,7 @@ type PortfolioSource = {
     email: string;
     linkedinUrl: string;
     githubUrl: string;
+    portfolioUrl: string;
     resumeUrl: string;
     resumeFileName: string;
     title: string;
@@ -76,6 +77,7 @@ export const site = {
   email: data.profile.email,
   linkedinUrl: data.profile.linkedinUrl,
   githubUrl: data.profile.githubUrl,
+  portfolioUrl: data.profile.portfolioUrl,
   resumeUrl: data.profile.resumeUrl,
   resumeFileName: data.profile.resumeFileName,
   title: data.profile.title,

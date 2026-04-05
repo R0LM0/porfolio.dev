@@ -1,4 +1,4 @@
-﻿{
+{
   "profile": {
     "brand": "r0lm0",
     "name": "Lenin Gilberto Osorio Martinez",
@@ -35,18 +35,43 @@
       ".NET",
       "Flutter"
     ],
-    "funFact": "Code is like humor. When you have to explain it, it's bad."
+    "funFact": "Code is like humor. When you have to explain it, it's bad.",
+    "portfolioUrl": "https://r0lm0.dev"
   },
   "navigation": [
-    { "label": "Experiencia", "href": "/#experience" },
-    { "label": "Proyectos", "href": "/#projects" },
-    { "label": "Skills", "href": "/#skills" },
-    { "label": "Contacto", "href": "mailto:rolmo33@yahoo.es" }
+    {
+      "label": "Experiencia",
+      "href": "/#experience"
+    },
+    {
+      "label": "Proyectos",
+      "href": "/#projects"
+    },
+    {
+      "label": "Skills",
+      "href": "/#skills"
+    },
+    {
+      "label": "Contacto",
+      "href": "mailto:rolmo33@yahoo.es"
+    }
   ],
   "socialLinks": [
-    { "label": "GitHub", "href": "https://github.com/R0LM0", "icon": "github" },
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/lenin-gilberto-osorio-martinez-680481324/", "icon": "linkedin" },
-    { "label": "Email", "href": "mailto:rolmo33@yahoo.es", "icon": "mail" }
+    {
+      "label": "GitHub",
+      "href": "https://github.com/R0LM0",
+      "icon": "github"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/lenin-gilberto-osorio-martinez-680481324/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:rolmo33@yahoo.es",
+      "icon": "mail"
+    }
   ],
   "experience": [
     {
@@ -55,7 +80,14 @@
       "period": "Julio 2024 - Febrero 2026",
       "location": "Managua, Nicaragua",
       "summary": "Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.",
-      "stack": [".NET 8/9", "REST APIs", "JWT", "React", "Tailwind CSS", "IIS"]
+      "stack": [
+        ".NET 8/9",
+        "REST APIs",
+        "JWT",
+        "React",
+        "Tailwind CSS",
+        "IIS"
+      ]
     },
     {
       "company": "FISE",
@@ -63,7 +95,14 @@
       "period": "Marzo 2019 - Junio 2024",
       "location": "Managua, Nicaragua",
       "summary": "Trabajé en sistemas institucionales de inventario, seguimiento de proyectos y reportes, usando .NET Core, Angular, React, PostgreSQL, GeoServer y mejoras sobre flujos documentales reales.",
-      "stack": [".NET Core", "Angular", "React", "PostgreSQL", "GeoServer", "RDLC"]
+      "stack": [
+        ".NET Core",
+        "Angular",
+        "React",
+        "PostgreSQL",
+        "GeoServer",
+        "RDLC"
+      ]
     },
     {
       "company": "FISE",
@@ -71,7 +110,11 @@
       "period": "Octubre 2018 - Febrero 2019",
       "location": "Managua, Nicaragua",
       "summary": "Desarrollé módulos sobre .NET Framework con MVC, migré reportes a RDLC y participé en mejoras para subsistemas administrativos internos.",
-      "stack": [".NET Framework", "MVC", "RDLC"]
+      "stack": [
+        ".NET Framework",
+        "MVC",
+        "RDLC"
+      ]
     }
   ],
   "projects": [
@@ -80,7 +123,11 @@
       "period": "2025",
       "description": "Plataforma SaaS para interactuar con modelos de IA en tiempo real, con autenticación federada, mensajería y backend escalable.",
       "outcome": "Implementé arquitectura full-stack con React, NestJS, PostgreSQL, WebSockets, OAuth con Google/GitHub y configuración de seguridad con Cloudflare.",
-      "stack": ["React", "NestJS", "PostgreSQL"],
+      "stack": [
+        "React",
+        "NestJS",
+        "PostgreSQL"
+      ],
       "href": "https://r3chat.r0lm0.dev/",
       "repo": "",
       "image": "/images/projects/r3chat-preview.svg",
@@ -91,7 +138,11 @@
       "period": "2026",
       "description": "Exploración de una arquitectura de portfolio con frontend Astro y backend desacoplado en NestJS para auth, contenido y gateway.",
       "outcome": "Me sirvió para validar los límites del alcance y separar correctamente el portfolio público del laboratorio backend.",
-      "stack": ["Astro", "NestJS", "Prisma"],
+      "stack": [
+        "Astro",
+        "NestJS",
+        "Prisma"
+      ],
       "image": "/images/projects/project-portfolio-microservices.svg",
       "imageAlt": "Ilustración del proyecto Portfolio Microservices"
     },
@@ -100,7 +151,11 @@
       "period": "Diciembre 2024 - Febrero 2025",
       "description": "Aplicación móvil para trabajo de campo con captura geoespacial, sincronización con API REST y soporte offline-first.",
       "outcome": "Permitió recolectar datos catastrales, capturar imágenes asociadas y seguir operando incluso con conectividad limitada.",
-      "stack": ["Flutter", "REST API", "Offline Sync"],
+      "stack": [
+        "Flutter",
+        "REST API",
+        "Offline Sync"
+      ],
       "image": "/images/projects/project-tasks.svg",
       "imageAlt": "Ilustración del proyecto AquaSync"
     },
@@ -109,7 +164,11 @@
       "period": "2024",
       "description": "Librería reusable para acelerar nuevos módulos backend con CRUD, filtros dinámicos y una base consistente de acceso a datos.",
       "outcome": "Redujo repetición, dejó patrones claros y mejoró la velocidad para crear servicios con paginación, caché y soft delete.",
-      "stack": [".NET", "Clean Architecture", "Pagination"],
+      "stack": [
+        ".NET",
+        "Clean Architecture",
+        "Pagination"
+      ],
       "image": "/images/projects/project-advanced-repository-library.svg",
       "imageAlt": "Ilustración de la librería Advanced Repository Library"
     }
@@ -118,17 +177,42 @@
     {
       "title": "Frontend",
       "description": "Interfaces rápidas, legibles y mantenibles, con foco en arquitectura y experiencia de usuario.",
-      "items": ["Astro", "React", "Angular", "TypeScript", "Vite", "Tailwind CSS", "HTML", "CSS"]
+      "items": [
+        "Astro",
+        "React",
+        "Angular",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS",
+        "HTML",
+        "CSS"
+      ]
     },
     {
       "title": "Backend",
       "description": "Servicios, autenticación y diseño robusto para productos que necesitan crecer sin romperse.",
-      "items": [".NET 8/9", "ASP.NET Core", "NestJS", "REST APIs", "JWT", "Cookies", "WebSockets"]
+      "items": [
+        ".NET 8/9",
+        "ASP.NET Core",
+        "NestJS",
+        "REST APIs",
+        "JWT",
+        "Cookies",
+        "WebSockets"
+      ]
     },
     {
       "title": "Data & Infra",
       "description": "Persistencia, despliegue y operación en entornos reales con foco en estabilidad y rendimiento.",
-      "items": ["PostgreSQL", "MySQL", "SQL Server", "Cloudflare", "Git", "CI/CD", "IIS"]
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "Cloudflare",
+        "Git",
+        "CI/CD",
+        "IIS"
+      ]
     }
   ]
 }

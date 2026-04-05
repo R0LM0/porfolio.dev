@@ -1,22 +1,24 @@
-﻿{
-    "name":  "r0lm0-portfolio",
-    "private":  true,
-    "type":  "module",
-    "version":  "0.1.0",
-    "scripts":  {
-                    "dev":  "astro dev",
-                    "start":  "astro dev",
-                    "build":  "astro check \u0026\u0026 astro build",
-                    "preview":  "astro preview",
-                    "astro":  "astro",
-                    "generate:github-readme":  "node ./scripts/generate-github-profile-readme.mjs"
-                },
-    "dependencies":  {
-                         "@astrojs/check":  "0.5.6",
-                         "@astrojs/tailwind":  "5.1.0",
-                         "@fontsource-variable/onest":  "5.0.2",
-                         "astro":  "4.4.5",
-                         "tailwindcss":  "3.4.1",
-                         "typescript":  "5.3.3"
-                     }
+{
+  "name": "r0lm0-portfolio",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate:profile-assets": "node ./scripts/generate-profile-assets.mjs",
+    "generate:github-readme": "node ./scripts/generate-github-profile-readme.mjs",
+    "generate:linkedin-sync": "node ./scripts/generate-linkedin-sync.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "0.5.6",
+    "@astrojs/tailwind": "5.1.0",
+    "@fontsource-variable/onest": "5.0.2",
+    "astro": "4.4.5",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.3.3"
+  }
 }

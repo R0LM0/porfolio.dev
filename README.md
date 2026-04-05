@@ -14,17 +14,43 @@ Portfolio estático en Astro + pnpm, pensado para correr rápido, mantenerse fá
 ```bash
 pnpm install
 pnpm dev
-pnpm build
-pnpm preview
+pnpm generate:profile-assets
+pnpm generate:github-readme
+pnpm generate:linkedin-sync
 ```
 
 > Nota: en esta sesión NO ejecuté build porque la regla del proyecto dice que no se debe construir después de cambios.
 
-## Dónde editar contenido
+## Fuente única de verdad
 
 Toda la data editable vive en:
 
+- `D:\WORKSPACES\PORTFOLIO\porfolio.dev\src\data\profile-source.json`
+
+Ese archivo alimenta:
+
 - `D:\WORKSPACES\PORTFOLIO\porfolio.dev\src\data\portfolio.ts`
+- `D:\WORKSPACES\PORTFOLIO\porfolio.dev\generated\github-profile\README.md`
+- `D:\WORKSPACES\PORTFOLIO\porfolio.dev\generated\linkedin-sync\PROFILE.md`
+
+## Cómo regenerar
+
+```bash
+pnpm generate:profile-assets
+```
+
+También podés usar alias específicos:
+
+```bash
+pnpm generate:github-readme
+pnpm generate:linkedin-sync
+```
+
+## Dónde editar contenido
+
+Si querés cambiar datos concretos, editá:
+
+- `D:\WORKSPACES\PORTFOLIO\porfolio.dev\src\data\profile-source.json`
 
 Ahí podés cambiar:
 
@@ -57,4 +83,5 @@ src/
 - Sin axios
 - Sin React
 - Sin `client:*`
+- LinkedIn no se sincroniza automáticamente: se mantiene un paquete manual y profesional
 - Todo enfocado en rendimiento, legibilidad y mantenimiento simple
