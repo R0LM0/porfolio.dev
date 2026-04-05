@@ -90,17 +90,19 @@ Plataforma SaaS para interactuar con modelos de IA en tiempo real, con autentica
 - **Stack:** React, NestJS, PostgreSQL
 - **Links:** [Demo](https://r3chat.r0lm0.dev/)
 
-### Portfolio Microservices · 2026
-Exploración de una arquitectura de portfolio con frontend Astro y backend desacoplado en NestJS para auth, contenido y gateway.
+### Handyman Proforma · 2026
+Aplicación web responsive para crear proformas profesionales de servicios handyman, administrar precios del catálogo y guardar información de clientes.
 
-- **Resultado:** Me sirvió para validar los límites del alcance y separar correctamente el portfolio público del laboratorio backend.
-- **Stack:** Astro, NestJS, Prisma
+- **Resultado:** Implementé un flujo privado con Next.js, Auth.js, Prisma y exportación PDF para generar cotizaciones claras, reutilizables y listas para negocio real.
+- **Stack:** Next.js, TypeScript, Prisma, Auth.js, Tailwind CSS, PDF Export
+- **Links:** [Demo](https://handyman-proforma.vercel.app/) · [Repo](https://github.com/R0LM0/handyman-proforma)
 
-### AquaSync · Diciembre 2024 - Febrero 2025
-Aplicación móvil para trabajo de campo con captura geoespacial, sincronización con API REST y soporte offline-first.
+### VEO Landing · 2025
+Landing comercial para VEO, una marca de jabones artesanales, con catálogo visual, narrativa de marca, testimonios y contacto directo por WhatsApp.
 
-- **Resultado:** Permitió recolectar datos catastrales, capturar imágenes asociadas y seguir operando incluso con conectividad limitada.
-- **Stack:** Flutter, REST API, Offline Sync
+- **Resultado:** Diseñé una experiencia clara y mobile-first para presentar el proyecto de mi esposa con identidad visual cuidada, navegación simple y despliegue en dominio propio.
+- **Stack:** Next.js, TypeScript, Tailwind CSS, Radix UI, Responsive Design
+- **Links:** [Demo](https://veo.r0lm0.dev/) · [Repo](https://github.com/R0LM0/veo-next)
 
 ## 🤝 Contacto
 

@@ -134,17 +134,39 @@
       "imageAlt": "Ilustración del proyecto R3.chat"
     },
     {
-      "title": "Portfolio Microservices",
+      "title": "Handyman Proforma",
       "period": "2026",
-      "description": "Exploración de una arquitectura de portfolio con frontend Astro y backend desacoplado en NestJS para auth, contenido y gateway.",
-      "outcome": "Me sirvió para validar los límites del alcance y separar correctamente el portfolio público del laboratorio backend.",
+      "description": "Aplicación web responsive para crear proformas profesionales de servicios handyman, administrar precios del catálogo y guardar información de clientes.",
+      "outcome": "Implementé un flujo privado con Next.js, Auth.js, Prisma y exportación PDF para generar cotizaciones claras, reutilizables y listas para negocio real.",
       "stack": [
-        "Astro",
-        "NestJS",
-        "Prisma"
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "Auth.js",
+        "Tailwind CSS",
+        "PDF Export"
       ],
-      "image": "/images/projects/project-portfolio-microservices.svg",
-      "imageAlt": "Ilustración del proyecto Portfolio Microservices"
+      "image": "/images/projects/handyman-proforma-preview.png",
+      "imageAlt": "Captura del proyecto Handyman Proforma",
+      "href": "https://handyman-proforma.vercel.app/",
+      "repo": "https://github.com/R0LM0/handyman-proforma"
+    },
+    {
+      "title": "VEO Landing",
+      "period": "2025",
+      "description": "Landing comercial para VEO, una marca de jabones artesanales, con catálogo visual, narrativa de marca, testimonios y contacto directo por WhatsApp.",
+      "outcome": "Diseñé una experiencia clara y mobile-first para presentar el proyecto de mi esposa con identidad visual cuidada, navegación simple y despliegue en dominio propio.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Radix UI",
+        "Responsive Design"
+      ],
+      "image": "/images/projects/veo-preview.png",
+      "imageAlt": "Captura de la landing VEO",
+      "href": "https://veo.r0lm0.dev/",
+      "repo": "https://github.com/R0LM0/veo-next"
     },
     {
       "title": "AquaSync",
