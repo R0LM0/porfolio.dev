@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad2)"/>
+  <polygon points="200,60 320,150 320,250 80,250 80,150" fill="#0a0a0f" opacity="0.9"/>
+  <polygon points="200,80 300,155 300,235 100,235 100,155" fill="none" stroke="#a855f7" stroke-width="3"/>
+  <circle cx="200" cy="145" r="25" fill="#a855f7"/>
+  <text x="200" y="155" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">P</text>
+  <rect x="140" y="190" width="120" height="10" rx="5" fill="#374151"/>
+  <text x="200" y="260" font-family="Arial" font-size="20" fill="white" text-anchor="middle" font-weight="bold">Portfolio</text>
+</svg>

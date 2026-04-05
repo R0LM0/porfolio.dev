@@ -1,0 +1,47 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frameGradient" x1="196" y1="120" x2="1418" y2="868" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C1B4D"/>
+      <stop offset="0.5" stop-color="#18141F"/>
+      <stop offset="1" stop-color="#3B1026"/>
+    </linearGradient>
+    <linearGradient id="strokeGradient" x1="270" y1="146" x2="1340" y2="886" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#EC4899" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="shadow" x="118" y="70" width="1364" height="840" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="32"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0196078 0 0 0 0 0.0235294 0 0 0 0 0.0509804 0 0 0 0.45 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="184" y="156" width="1232" height="706" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="980" fill="#0B0B0F"/>
+  <circle cx="1268" cy="739" r="214" fill="#831843" fill-opacity="0.18"/>
+  <circle cx="410" cy="276" r="264" fill="#6D28D9" fill-opacity="0.16"/>
+
+  <g filter="url(#shadow)">
+    <rect x="182" y="120" width="1236" height="744" rx="28" fill="url(#frameGradient)"/>
+    <rect x="182.75" y="120.75" width="1234.5" height="742.5" rx="27.25" stroke="url(#strokeGradient)" stroke-opacity="0.9" stroke-width="1.5"/>
+    <rect x="182" y="120" width="1236" height="58" rx="28" fill="#111118"/>
+    <path d="M182 150C182 134.536 194.536 122 210 122H1390C1405.46 122 1418 134.536 1418 150V178H182V150Z" fill="#16131D"/>
+    <circle cx="222" cy="149" r="7" fill="#FB7185"/>
+    <circle cx="248" cy="149" r="7" fill="#FBBF24"/>
+    <circle cx="274" cy="149" r="7" fill="#34D399"/>
+    <text x="800" y="156" text-anchor="middle" fill="#F5F3FF" font-family="Onest Variable, Inter, Arial, sans-serif" font-size="24" font-weight="600">r3chat.r0lm0.dev</text>
+    <g clip-path="url(#screenClip)">
+      <image href="/images/projects/r3chat-preview.png" x="184" y="156" width="1232" height="706" preserveAspectRatio="xMidYMid slice"/>
+    </g>
+  </g>
+
+  <text x="184" y="924" fill="#F8FAFC" font-family="Onest Variable, Inter, Arial, sans-serif" font-size="42" font-weight="700">R3.chat preview</text>
+  <text x="184" y="958" fill="#A1A1AA" font-family="Onest Variable, Inter, Arial, sans-serif" font-size="24" font-weight="500">Captura del sitio real envuelta en un frame SVG para usarla como preview del proyecto.</text>
+</svg>

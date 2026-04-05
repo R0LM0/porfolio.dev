@@ -1,0 +1,35 @@
+---
+import ArrowUpRightIcon from '@/components/icons/ArrowUpRight.astro';
+import DownloadIcon from '@/components/icons/Download.astro';
+
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  external?: boolean;
+  download?: string;
+  class?: string;
+}
+
+const {
+  href,
+  variant = 'primary',
+  external = href.startsWith('http'),
+  download,
+  class: className = '',
+} = Astro.props;
+
+const rel = external ? 'noreferrer noopener' : undefined;
+const target = external ? '_blank' : undefined;
+const variantClass = variant === 'secondary' ? 'button-secondary' : 'button-primary';
+---
+
+<a
+  class={`button-base ${variantClass} ${className}`.trim()}
+  href={href}
+  rel={rel}
+  target={target}
+  download={download}
+>
+  <slot />
+  {download ? <DownloadIcon class="size-4" /> : external ? <ArrowUpRightIcon class="size-4" /> : null}
+</a>

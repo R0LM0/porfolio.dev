@@ -1,0 +1,35 @@
+---
+import Container from '@/components/Container.astro';
+import ButtonLink from '@/components/ButtonLink.astro';
+import { contact, site } from '@/data/portfolio';
+---
+
+<Container id="contact" class="py-12 sm:py-16">
+  <div class="surface grid gap-8 overflow-hidden p-6 sm:p-8 lg:grid-cols-[1.2fr_0.8fr]" data-reveal>
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <h2 class="section-title">{contact.title}</h2>
+      <p class="section-copy">{contact.description}</p>
+      <p class="mt-5 max-w-2xl text-sm leading-7 text-slate-400">{contact.availability}</p>
+    </div>
+
+    <aside class="surface-soft flex flex-col gap-4 p-5">
+      <div>
+        <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Email</p>
+        <a class="mt-2 inline-block text-lg font-medium text-white transition hover:text-fuchsia-200" href={`mailto:${site.email}`}>
+          {site.email}
+        </a>
+      </div>
+
+      <div>
+        <p class="text-xs uppercase tracking-[0.24em] text-slate-500">Ubicación</p>
+        <p class="mt-2 text-sm text-slate-300">{site.location}</p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 pt-2">
+        <ButtonLink href={`mailto:${site.email}`} variant="primary">Escribime</ButtonLink>
+        <ButtonLink href="/api/cv.pdf" download={site.resumeFileName} variant="secondary">CV PDF</ButtonLink>
+      </div>
+    </aside>
+  </div>
+</Container>

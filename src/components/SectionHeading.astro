@@ -1,0 +1,24 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  copy: string;
+  align?: 'left' | 'center';
+}
+
+const {
+  eyebrow,
+  title,
+  copy,
+  align = 'left',
+} = Astro.props;
+
+const alignment =
+  align === 'center' ? 'mx-auto text-center items-center' : 'items-start';
+---
+
+<div class={`flex max-w-3xl flex-col ${alignment}`.trim()}>
+  <span class="eyebrow">{eyebrow}</span>
+  <h2 class="section-title">{title}</h2>
+  <p class="section-copy">{copy}</p>
+</div>
