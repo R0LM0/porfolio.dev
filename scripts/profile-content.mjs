@@ -1,12 +1,82 @@
 import source from "../src/data/profile-source.json" with { type: "json" };
 
-const { profile, experience, projects, skillGroups } = source;
+const { profile, experience, projects, skillGroups, githubProfile = {} } = source;
 
-function toBullets(items) {
-  return items.map((item) => `- ${item}`).join("\n");
+const skillIconMap = {
+  Astro: "astro",
+  React: "react",
+  Angular: "angular",
+  TypeScript: "ts",
+  Vite: "vite",
+  "Tailwind CSS": "tailwind",
+  HTML: "html",
+  CSS: "css",
+  ".NET 8/9": "dotnet",
+  ".NET": "dotnet",
+  ".NET Core": "dotnet",
+  ".NET Framework": "dotnet",
+  "ASP.NET Core": "dotnet",
+  NestJS: "nestjs",
+  "REST APIs": "postman",
+  PostgreSQL: "postgres",
+  MySQL: "mysql",
+  "SQL Server": "sqlite",
+  Cloudflare: "cloudflare",
+  Git: "git",
+  "CI/CD": "githubactions",
+  IIS: "windows",
+  Prisma: "prisma",
+  "Auth.js": "nextjs",
+  "Responsive Design": "figma",
+  Flutter: "flutter",
+  "Offline Sync": "firebase",
+};
+
+const typingLines = githubProfile.typingLines ?? [
+  "Full-Stack Engineer especializado en .NET y React",
+  "APIs, plataformas de negocio y software en producción",
+  "Arquitectura limpia, producto y ejecución real",
+];
+
+const featuredFocus = githubProfile.featuredFocus ?? [
+  "REST APIs y backend en producción",
+  "Frontend con React y Angular para flujos operativos reales",
+  "Modernización de sistemas legacy con criterio técnico",
+];
+
+const githubSummary =
+  githubProfile.summary ??
+  "Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio y plataformas geoespaciales, construyendo software confiable para entornos reales.";
+
+function uniq(items) {
+  return [...new Set(items)];
 }
 
-function topProjects(limit = 3) {
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function badge(label, logo, href, color = "111827", logoColor = "white") {
+  const labelSlug = encodeURIComponent(label);
+  const logoSlug = encodeURIComponent(logo);
+
+  return `<a href="${href}"><img src="https://img.shields.io/badge/${labelSlug}-${color}?style=for-the-badge&logo=${logoSlug}&logoColor=${logoColor}" alt="${escapeHtml(label)} badge" /></a>`;
+}
+
+function skillIcons(items) {
+  const icons = uniq(items.map((item) => skillIconMap[item]).filter(Boolean));
+
+  return icons.length
+    ? `https://skillicons.dev/icons?i=${icons.join(",")}&theme=dark`
+    : null;
+}
+
+function topProjects(limit = 4) {
   return projects.slice(0, limit);
 }
 
@@ -14,77 +84,149 @@ function topExperience(limit = 3) {
   return experience.slice(0, limit);
 }
 
+function buildProjectTableRows() {
+  return topProjects()
+    .map((project) => {
+      const links = [
+        project.href ? `[Demo](${project.href})` : "—",
+        project.repo ? `[Repo](${project.repo})` : null,
+      ]
+        .filter(Boolean)
+        .join(" · ");
+
+      const summary = project.outcome ?? project.description;
+      const stack = project.stack.slice(0, 4).join(", ");
+
+      return `| **${project.title}** | ${summary} | ${stack} | ${links} |`;
+    })
+    .join("\n");
+}
+
+function buildExperienceCards() {
+  return topExperience()
+    .map(
+      (item) => `
+<table>
+  <tr>
+    <td width="22"><strong>▹</strong></td>
+    <td>
+      <strong>${item.role}</strong><br />
+      <sub>${item.company} · ${item.period} · ${item.location}</sub><br />
+      ${item.summary}
+    </td>
+  </tr>
+</table>`,
+    )
+    .join("\n");
+}
+
+function buildCategory(title) {
+  return skillGroups.find((group) => group.title === title);
+}
+
+function buildCategoryBlock(group) {
+  if (!group) return "";
+
+  const icons = skillIcons(group.items);
+  const chips = group.items.map((item) => `\`${item}\``).join(" ");
+
+  return `### ${group.title}
+${group.description}
+
+${icons ? `<img src="${icons}" alt="${escapeHtml(group.title)} icons" />\n\n` : ""}${chips}`;
+}
+
 export function buildGithubProfileReadme() {
-  const readme = `# 👋 Hola, soy ${profile.brand}
+  const socialBadges = [
+    badge("Portfolio", "vercel", profile.portfolioUrl),
+    badge("LinkedIn", "linkedin", profile.linkedinUrl, "0A66C2"),
+    badge("GitHub", "github", profile.githubUrl, "181717"),
+    badge("Email", "gmail", `mailto:${profile.email}`, "EA4335"),
+  ].join("\n");
 
-## ${profile.headline}
+  const typingSvg = `https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=20&duration=2800&pause=1200&center=true&vCenter=true&width=920&lines=${typingLines
+    .map((line) => encodeURIComponent(line))
+    .join(";")}`;
 
-${profile.heroDescription}
+  const snapshotItems = [
+    "Especializado en .NET, backend escalable y software de negocio en producción.",
+    "Experiencia entregando REST APIs, frontend de operaciones y soluciones para sector público y privado.",
+    "Cómodo modernizando sistemas legacy, afinando rendimiento y resolviendo autenticación, seguridad y diseño de datos.",
+  ];
 
-> ${profile.heroHighlight}
+  const currentFocus = [
+    `**Enfoque:** ${profile.focus.join(" · ")}`,
+    `**Aprendiendo:** ${profile.currentlyLearning.join(" · ")}`,
+    `**Preguntame sobre:** ${profile.askMeAbout.join(" · ")}`,
+  ];
 
-### 🚀 En qué me enfoco
-${toBullets(profile.focus)}
+  const skillBlocks = [
+    buildCategoryBlock(buildCategory("Frontend")),
+    buildCategoryBlock(buildCategory("Backend")),
+    buildCategoryBlock(buildCategory("Data & Infra")),
+  ].filter(Boolean);
 
-### 🧠 Actualmente aprendiendo
-${toBullets(profile.currentlyLearning)}
+  return `<!-- Generated from porfolio.dev source -->
+<div align="center">
+  <img src="${typingSvg}" alt="Typing intro for ${escapeHtml(profile.name)}" />
+</div>
 
-### 💬 Preguntame sobre
-${toBullets(profile.askMeAbout)}
+<h1 align="center">Hola, soy ${profile.brand}</h1>
+<p align="center"><strong>${profile.headline}</strong></p>
+<p align="center">${githubSummary}</p>
 
-## 🧩 Stack principal
+<div align="center">
+  ${socialBadges}
+</div>
 
-${skillGroups
-  .map(
-    (group) =>
-      `### ${group.title}\n${group.description}\n\n${toBullets(group.items)}`,
-  )
-  .join("\n\n")}
+## Perfil en una mirada
 
-## 💼 Experiencia destacada
+<table>
+  <tr>
+    <td width="56%" valign="top">
+      <strong>Qué construyo</strong><br /><br />
+      ${featuredFocus.map((item) => `• ${item}`).join("<br />")}
+      <br /><br />
+      <strong>Snapshot profesional</strong><br /><br />
+      ${snapshotItems.map((item) => `• ${item}`).join("<br />")}
+    </td>
+    <td width="44%" valign="top">
+      <strong>Ahora mismo</strong><br /><br />
+      ${currentFocus.join("<br /><br />")}
+    </td>
+  </tr>
+</table>
 
-${topExperience()
-  .map(
-    (item) =>
-      `### ${item.role} · ${item.company}\n- **Período:** ${item.period}\n- **Ubicación:** ${item.location}\n- **Impacto:** ${item.summary}\n- **Stack:** ${item.stack.join(", ")}`,
-  )
-  .join("\n\n")}
+## Stack principal
 
-## 🛠️ Proyectos destacados
+${skillBlocks.join("\n\n")}
 
-${topProjects()
-  .map((project) => {
-    const links = [project.href ? `[Demo](${project.href})` : null, project.repo ? `[Repo](${project.repo})` : null]
-      .filter(Boolean)
-      .join(" · ");
+## Experiencia reciente
 
-    return `### ${project.title} · ${project.period}
-${project.description}
+${buildExperienceCards()}
 
-- **Resultado:** ${project.outcome}
-- **Stack:** ${project.stack.join(", ")}${links ? `\n- **Links:** ${links}` : ""}`;
-  })
-  .join("\n\n")}
+## Proyectos destacados
 
-## 🤝 Contacto
+| Proyecto | Aporte principal | Stack | Links |
+| --- | --- | --- | --- |
+${buildProjectTableRows()}
 
-- **Email:** [${profile.email}](mailto:${profile.email})
-- **LinkedIn:** [Perfil profesional](${profile.linkedinUrl})
-- **GitHub:** [${profile.githubUrl.replace("https://github.com/", "")}](${profile.githubUrl})
-- **Portfolio:** [${profile.portfolioUrl.replace("https://", "")}](${profile.portfolioUrl})
+## Contacto
 
----
+- **Portfolio:** ${profile.portfolioUrl}
+- **LinkedIn:** ${profile.linkedinUrl}
+- **GitHub:** ${profile.githubUrl}
+- **Email:** ${profile.email}
+- **CV:** ${profile.portfolioUrl}${profile.resumeUrl}
 
-_Fun fact:_ ${profile.funFact}
+> ${profile.funFact}
 `;
-
-  return readme;
 }
 
 export function buildLinkedInSyncProfile() {
   const headline = `${profile.shortName} | ${profile.role} | ${profile.headline}`;
   const about = [
-    profile.heroDescription,
+    githubSummary,
     profile.heroHighlight,
     `Trabajo desde ${profile.location}, con foco en calidad, arquitectura, APIs y experiencia de usuario.`,
   ].join(" ");
@@ -100,11 +242,7 @@ export function buildLinkedInSyncProfile() {
 
   const experienceBlock = topExperience()
     .map(
-      (item) => `### ${item.role} · ${item.company}
-- Período: ${item.period}
-- Ubicación: ${item.location}
-- Resumen: ${item.summary}
-- Stack: ${item.stack.join(", ")}`,
+      (item) => `### ${item.role} · ${item.company}\n- Período: ${item.period}\n- Ubicación: ${item.location}\n- Resumen: ${item.summary}\n- Stack: ${item.stack.join(", ")}`,
     )
     .join("\n\n");
 
@@ -120,7 +258,7 @@ export function buildLinkedInSyncProfile() {
     `LinkedIn: ${profile.linkedinUrl}`,
   ];
 
-  const markdown = `# LinkedIn Sync Pack
+  return `# LinkedIn Sync Pack
 
 ## Headline
 
@@ -140,7 +278,7 @@ ${experienceBlock}
 
 ## Skills to highlight
 
-${Array.from(new Set(skills)).map((skill) => `- ${skill}`).join("\n")}
+${uniq(skills).map((skill) => `- ${skill}`).join("\n")}
 
 ## Suggested links
 
@@ -152,7 +290,4 @@ ${suggestedLinks.map((line) => `- ${line}`).join("\n")}
 - Si cambia la fuente única, regenerá este archivo y el README de GitHub.
 - Mantené LinkedIn alineado con el portfolio, pero adaptado al tono profesional de la plataforma.
 `;
-
-  return markdown;
 }
-

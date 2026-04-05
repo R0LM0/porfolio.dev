@@ -6,7 +6,7 @@
 
 ## About
 
-Especializado en .NET, APIs y plataformas de negocio en producción, con experiencia real en frontend, backend y modernización de sistemas. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
+Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio y plataformas geoespaciales, construyendo software confiable para entornos reales. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
 
 ## Short summary
 

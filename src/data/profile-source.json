@@ -236,5 +236,18 @@
         "IIS"
       ]
     }
-  ]
+  ],
+  "githubProfile": {
+    "typingLines": [
+      "Full-Stack Engineer especializado en .NET y React",
+      "APIs, plataformas de negocio y software en producción",
+      "Arquitectura limpia, producto y ejecución real"
+    ],
+    "summary": "Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio y plataformas geoespaciales, construyendo software confiable para entornos reales.",
+    "featuredFocus": [
+      "REST APIs y backend en producción",
+      "Frontend con React y Angular para flujos operativos reales",
+      "Modernización de sistemas legacy con criterio técnico"
+    ]
+  }
 }
