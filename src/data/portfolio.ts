@@ -48,6 +48,8 @@ type PortfolioSource = {
     headline: string;
     location: string;
     email: string;
+    phone: string;
+    whatsappUrl: string;
     linkedinUrl: string;
     githubUrl: string;
     portfolioUrl: string;
@@ -75,6 +77,8 @@ export const site = {
   role: data.profile.role,
   location: data.profile.location,
   email: data.profile.email,
+  phone: data.profile.phone,
+  whatsappUrl: data.profile.whatsappUrl,
   linkedinUrl: data.profile.linkedinUrl,
   githubUrl: data.profile.githubUrl,
   portfolioUrl: data.profile.portfolioUrl,

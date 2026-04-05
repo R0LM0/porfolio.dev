@@ -2,11 +2,11 @@
 
 ## Headline
 
-`Lenin Osorio | Full-Stack Engineer | Full-Stack Engineer con foco en .NET, frontend y arquitectura de producto`
+`Lenin Osorio | Full-Stack Engineer | Full-Stack Engineer con foco en .NET, frontend, mobile y arquitectura de producto`
 
 ## About
 
-Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio y plataformas geoespaciales, construyendo software confiable para entornos reales. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
+Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio, mobile con Flutter y plataformas geoespaciales, construyendo software confiable para entornos reales. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
 
 ## Short summary
 
@@ -45,11 +45,14 @@ Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplica
 - NestJS
 - .NET
 - Flutter
+- Android
 - Vite
 - Angular
 - Tailwind CSS
 - HTML
 - CSS
+- Dart
+- Offline-first
 - .NET 8/9
 - ASP.NET Core
 - REST APIs

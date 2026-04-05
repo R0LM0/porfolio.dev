@@ -3,12 +3,14 @@ import Layout from "@/layouts/Layout.astro";
 
 import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeIcon from "@/components/icons/Code.astro";
+import MailIcon from "@/components/icons/Mail.astro";
 import Experience from "@/components/Experience.astro";
 import Projects from "@/components/Projects.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import Skills from "@/components/Skills.astro";
+import Contact from "@/components/Contact.astro";
 import { site } from "@/data/portfolio";
 ---
 
@@ -43,6 +45,14 @@ import { site } from "@/data/portfolio";
           Skills
         </TitleSection>
         <Skills />
+      </SectionContainer>
+
+      <SectionContainer id="contact">
+        <TitleSection>
+          <MailIcon class="size-7" />
+          Contacto
+        </TitleSection>
+        <Contact />
       </SectionContainer>
     </div>
   </main>
