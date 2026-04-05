@@ -2,16 +2,16 @@
 
 ## Headline
 
-`Lenin Osorio | Full-Stack Software Engineer | Full-Stack Software Engineer con foco en frontend, arquitectura y producto`
+`Lenin Osorio | Full-Stack Engineer | Full-Stack Engineer con foco en .NET, frontend y arquitectura de producto`
 
 ## About
 
-Ingeniero de software especializado en frontend, APIs y arquitectura de aplicaciones. Me enfoco en construir productos claros, performantes y mantenibles para entornos reales. Trabajo entre frontend, backend y producto, priorizando buenas bases, criterio técnico y una experiencia de usuario prolija de verdad. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
+Especializado en .NET, APIs y plataformas de negocio en producción, con experiencia real en frontend, backend y modernización de sistemas. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
 
 ## Short summary
 
 - Lenin Gilberto Osorio Martinez
-- Full-Stack Software Engineer
+- Full-Stack Engineer
 - Ubicación: Managua, Nicaragua
 - Email: rolmo33@yahoo.es
 - Portfolio: https://r0lm0.dev

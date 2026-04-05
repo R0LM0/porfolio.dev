@@ -1,10 +1,10 @@
 # 👋 Hola, soy r0lm0
 
-## Full-Stack Software Engineer con foco en frontend, arquitectura y producto
+## Full-Stack Engineer con foco en .NET, frontend y arquitectura de producto
 
-Ingeniero de software especializado en frontend, APIs y arquitectura de aplicaciones. Me enfoco en construir productos claros, performantes y mantenibles para entornos reales.
+Especializado en .NET, APIs y plataformas de negocio en producción, con experiencia real en frontend, backend y modernización de sistemas.
 
-> Trabajo entre frontend, backend y producto, priorizando buenas bases, criterio técnico y una experiencia de usuario prolija de verdad.
+> Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos.
 
 ### 🚀 En qué me enfoco
 - Frontend architecture
