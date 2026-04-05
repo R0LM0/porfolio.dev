@@ -3,21 +3,64 @@ import GitHubIcon from "./icons/GitHub.astro";
 import LinkIcon from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import { projects } from "@/data/portfolio";
+
+const isRasterPreview = (image: string) => /\.(png|jpe?g|webp)$/i.test(image);
+
+const getPreviewLabel = (href: string | undefined, title: string) => {
+  if (!href) return title;
+
+  try {
+    return new URL(href).hostname.replace(/^www\./, "");
+  } catch {
+    return title;
+  }
+};
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    projects.map(({ image, imageAlt, title, description, outcome, stack, href, repo }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+    projects.map(({ image, imageAlt, title, description, outcome, stack, href, repo }, index) => (
+      <article class="flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
         <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-            <img
-              alt={imageAlt}
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
-              src={image}
-            />
-          </div>
+          {
+            isRasterPreview(image) ? (
+              <a
+                aria-label={`Abrir preview de ${title}`}
+                class="block overflow-hidden rounded-[1.35rem] border border-slate-200/80 bg-[#0b0b0f] shadow-[0_18px_50px_-30px_rgba(15,23,42,0.42)] transition-colors duration-300 dark:border-white/10 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.88)]"
+                href={href ?? image}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <div class="flex items-center justify-between border-b border-white/10 bg-white/5 px-4 py-3 text-xs font-medium text-white/70">
+                  <div class="flex items-center gap-2" aria-hidden="true">
+                    <span class="size-2.5 rounded-full bg-rose-400/90"></span>
+                    <span class="size-2.5 rounded-full bg-amber-300/90"></span>
+                    <span class="size-2.5 rounded-full bg-emerald-400/90"></span>
+                  </div>
+                  <span class="truncate">{getPreviewLabel(href, title)}</span>
+                  <span class="text-[11px] uppercase tracking-[0.24em] text-white/45">Live</span>
+                </div>
+                <img
+                  alt={imageAlt}
+                  class="h-56 w-full object-cover object-top sm:h-[22rem]"
+                  decoding="async"
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  src={image}
+                />
+              </a>
+            ) : (
+              <div class="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-[0_18px_50px_-30px_rgba(15,23,42,0.18)] transition-colors duration-300 dark:border-white/10 dark:bg-slate-950 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.72)]">
+                <img
+                  alt={imageAlt}
+                  class="h-56 w-full object-cover object-center sm:h-[22rem]"
+                  decoding="async"
+                  loading="lazy"
+                  src={image}
+                />
+              </div>
+            )
+          }
         </div>
 
         <div class="w-full md:w-1/2 md:max-w-lg">
