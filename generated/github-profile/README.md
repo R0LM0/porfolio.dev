@@ -37,9 +37,9 @@
 ### Frontend
 Interfaces rápidas, legibles y mantenibles, con foco en arquitectura y experiencia de usuario.
 
-<img src="https://skillicons.dev/icons?i=astro,react,angular,ts,vite,tailwind,html,css&theme=dark" alt="Frontend icons" />
+<img src="https://skillicons.dev/icons?i=vite,react,angular,ts,astro,tailwind,html,css&theme=dark" alt="Frontend icons" />
 
-`Astro` `React` `Angular` `TypeScript` `Vite` `Tailwind CSS` `HTML` `CSS`
+`Vite` `React` `Angular` `TypeScript` `Astro` `Tailwind CSS` `HTML` `CSS`
 
 ### Backend
 Servicios, autenticación y diseño robusto para productos que necesitan crecer sin romperse.
@@ -51,9 +51,9 @@ Servicios, autenticación y diseño robusto para productos que necesitan crecer 
 ### Data & Infra
 Persistencia, despliegue y operación en entornos reales con foco en estabilidad y rendimiento.
 
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,cloudflare,git,githubactions,windows&theme=dark" alt="Data &amp; Infra icons" />
+<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,cloudflare,docker,git,githubactions,windows&theme=dark" alt="Data &amp; Infra icons" />
 
-`PostgreSQL` `MySQL` `SQL Server` `Cloudflare` `Git` `CI/CD` `IIS`
+`PostgreSQL` `MySQL` `SQL Server` `Cloudflare` `Docker` `Git` `CI/CD` `IIS`
 
 ## Experiencia reciente
 

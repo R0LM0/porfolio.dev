@@ -200,11 +200,11 @@
       "title": "Frontend",
       "description": "Interfaces rápidas, legibles y mantenibles, con foco en arquitectura y experiencia de usuario.",
       "items": [
-        "Astro",
+        "Vite",
         "React",
         "Angular",
         "TypeScript",
-        "Vite",
+        "Astro",
         "Tailwind CSS",
         "HTML",
         "CSS"
@@ -231,6 +231,7 @@
         "MySQL",
         "SQL Server",
         "Cloudflare",
+        "Docker",
         "Git",
         "CI/CD",
         "IIS"

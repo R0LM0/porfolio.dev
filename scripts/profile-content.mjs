@@ -22,6 +22,7 @@ const skillIconMap = {
   MySQL: "mysql",
   "SQL Server": "sqlite",
   Cloudflare: "cloudflare",
+  Docker: "docker",
   Git: "git",
   "CI/CD": "githubactions",
   IIS: "windows",

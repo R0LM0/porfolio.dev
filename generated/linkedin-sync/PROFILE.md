@@ -45,8 +45,8 @@ Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplica
 - NestJS
 - .NET
 - Flutter
-- Angular
 - Vite
+- Angular
 - Tailwind CSS
 - HTML
 - CSS
@@ -60,6 +60,7 @@ Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplica
 - MySQL
 - SQL Server
 - Cloudflare
+- Docker
 - Git
 - CI/CD
 - IIS
