@@ -43,6 +43,10 @@
   },
   "navigation": [
     {
+      "label": "r0lm0",
+      "href": "/#home"
+    },
+    {
       "label": "Experiencia",
       "href": "/#experience"
     },
