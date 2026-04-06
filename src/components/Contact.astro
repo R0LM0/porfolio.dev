@@ -1,5 +1,4 @@
 ---
-import ButtonLink from "@/components/ButtonLink.astro";
 import DownloadIcon from "@/components/icons/Download.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import WhatsAppIcon from "@/components/icons/WhatsApp.astro";
@@ -26,19 +25,31 @@ import { site } from "@/data/portfolio";
       </span>
     </div>
 
-    <div class="mt-7 flex flex-wrap gap-3">
-      <ButtonLink href={`mailto:${site.email}`} class="justify-center">
+    <div class="mt-7 grid gap-3 sm:grid-cols-3">
+      <a
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-500/30 hover:text-cyan-700 dark:border-white/10 dark:bg-slate-950 dark:text-white dark:hover:text-cyan-300"
+        href={`mailto:${site.email}`}
+      >
         <MailIcon class="size-4" />
         Correo
-      </ButtonLink>
-      <ButtonLink href={site.whatsappUrl} external class="justify-center">
+      </a>
+      <a
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-500/30 hover:text-cyan-700 dark:border-white/10 dark:bg-slate-950 dark:text-white dark:hover:text-cyan-300"
+        href={site.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <WhatsAppIcon class="size-4" />
         WhatsApp
-      </ButtonLink>
-      <ButtonLink href={site.resumeUrl} download={site.resumeFileName} variant="secondary" class="justify-center">
+      </a>
+      <a
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-black/10 bg-white px-4 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-500/30 hover:text-cyan-700 dark:border-white/10 dark:bg-slate-950 dark:text-white dark:hover:text-cyan-300"
+        href={site.resumeUrl}
+        download={site.resumeFileName}
+      >
         <DownloadIcon class="size-4" />
         Descargar CV
-      </ButtonLink>
+      </a>
     </div>
 
     <div class="mt-8 grid gap-3 md:grid-cols-3">
