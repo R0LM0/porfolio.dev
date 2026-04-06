@@ -37,17 +37,17 @@ import { navigation } from "@/data/portfolio";
     const navItems = document.querySelectorAll<HTMLAnchorElement>("header nav a")
     const headerNav = document.getElementById("header-nav")
     const sectionState = new Map<string, number>()
-
-    const updateScrolledState = () => {
-      headerNav?.toggleAttribute("data-scrolled", window.scrollY > 12)
-    }
-
-    updateScrolledState()
-    window.addEventListener("scroll", updateScrolledState, { passive: true })
+    let activeSectionId = "home"
 
     const syncActiveNav = () => {
-      const activeSectionId = Array.from(sectionState.entries())
+      const currentSectionId = Array.from(sectionState.entries())
         .sort((a, b) => b[1] - a[1])[0]?.[0]
+
+      if (currentSectionId != null) {
+        activeSectionId = currentSectionId
+      }
+
+      headerNav?.toggleAttribute("data-scrolled", activeSectionId !== "home")
 
       navItems.forEach((item) => {
         const targetSection = item.getAttribute("data-section")
@@ -81,6 +81,8 @@ import { navigation } from "@/data/portfolio";
     sections.forEach((section) => {
       observer.observe(section)
     })
+
+    syncActiveNav()
 
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
