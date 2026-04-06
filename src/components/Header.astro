@@ -39,6 +39,10 @@ import { navigation } from "@/data/portfolio";
     const sectionState = new Map<string, number>()
     let activeSectionId = "home"
 
+    const updateIslandState = () => {
+      headerNav?.toggleAttribute("data-scrolled", window.scrollY > 12)
+    }
+
     const syncActiveNav = () => {
       const currentSectionId = Array.from(sectionState.entries())
         .sort((a, b) => b[1] - a[1])[0]?.[0]
@@ -46,8 +50,6 @@ import { navigation } from "@/data/portfolio";
       if (currentSectionId != null) {
         activeSectionId = currentSectionId
       }
-
-      headerNav?.toggleAttribute("data-scrolled", activeSectionId !== "home")
 
       navItems.forEach((item) => {
         const targetSection = item.getAttribute("data-section")
@@ -77,6 +79,9 @@ import { navigation } from "@/data/portfolio";
       rootMargin: "-18% 0px -52% 0px",
       threshold: [0.2, 0.4, 0.6, 0.8],
     })
+
+    updateIslandState()
+    window.addEventListener("scroll", updateIslandState, { passive: true })
 
     sections.forEach((section) => {
       observer.observe(section)
