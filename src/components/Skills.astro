@@ -43,11 +43,14 @@ const tones = [
               {
                 featured.map((item) => (
                   <div
-                    class="flex items-center justify-center rounded-2xl border border-black/10 bg-white/70 px-3 py-4 text-center shadow-sm dark:border-white/10 dark:bg-white/5"
+                    class="group/icon flex items-center justify-center rounded-2xl border border-black/10 bg-white/70 px-3 py-4 text-center shadow-sm transition-all duration-300 ease-out motion-reduce:transition-none hover:-translate-y-0.5 hover:border-cyan-500/30 hover:bg-white/90 hover:shadow-[0_16px_35px_-24px_rgba(15,23,42,0.35)] dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                     aria-label={item}
                     title={item}
                   >
-                    <SkillGlyph label={item} class="size-10" />
+                    <SkillGlyph
+                      label={item}
+                      class="size-10 transition-transform duration-300 ease-out motion-reduce:transition-none group-hover/icon:scale-110 group-hover/icon:-rotate-3"
+                    />
                   </div>
                 ))
               }
