@@ -28,13 +28,13 @@
       "DevOps"
     ],
     "askMeAbout": [
-      "TypeScript",
-      "Astro",
       "React",
-      "NestJS",
-      ".NET",
+      "Vite",
+      "TypeScript",
+      "Next.js",
       "Flutter",
-      "Android"
+      "NestJS",
+      ".NET"
     ],
     "funFact": "Code is like humor. When you have to explain it, it's bad.",
     "portfolioUrl": "https://r0lm0.dev",
@@ -202,12 +202,12 @@
   "skillGroups": [
     {
       "title": "Frontend",
-      "description": "Interfaces rápidas, legibles y mantenibles, con foco en arquitectura y experiencia de usuario.",
+      "description": "Interfaces de producto con React, Vite, TypeScript y Next.js, priorizando velocidad, claridad y mantenibilidad.",
       "items": [
-        "Vite",
         "React",
-        "Angular",
+        "Vite",
         "TypeScript",
+        "Next.js",
         "Astro",
         "Tailwind CSS",
         "HTML",
@@ -216,7 +216,7 @@
     },
     {
       "title": "Mobile",
-      "description": "Aplicaciones móviles para Android con foco en experiencia usable, sincronización y trabajo de campo.",
+      "description": "Aplicaciones móviles con Flutter para Android, enfocadas en experiencia usable, sincronización y trabajo de campo.",
       "items": [
         "Flutter",
         "Dart",
@@ -225,44 +225,44 @@
       ]
     },
     {
-      "title": "Backend",
-      "description": "Servicios, autenticación y diseño robusto para productos que necesitan crecer sin romperse.",
+      "title": "Backend enterprise",
+      "description": "Sistemas con .NET y SQL Server para entornos institucionales y licenciados, con foco en estabilidad y operación.",
       "items": [
         ".NET 8/9",
         "ASP.NET Core",
-        "NestJS",
-        "REST APIs",
+        "SQL Server",
+        "IIS",
         "JWT",
         "Cookies",
-        "WebSockets"
+        "REST APIs"
       ]
     },
     {
-      "title": "Data & Infra",
-      "description": "Persistencia, despliegue y operación en entornos reales con foco en estabilidad y rendimiento.",
+      "title": "Backend open source",
+      "description": "Servicios con NestJS y PostgreSQL para productos flexibles y abiertos, con despliegue y soporte técnico ordenado.",
       "items": [
+        "NestJS",
         "PostgreSQL",
-        "MySQL",
-        "SQL Server",
-        "Cloudflare",
         "Docker",
+        "Cloudflare",
         "Git",
         "CI/CD",
-        "IIS"
+        "WebSockets",
+        "REST APIs"
       ]
     }
   ],
   "githubProfile": {
     "typingLines": [
-      "Full-Stack Engineer especializado en .NET, React y Flutter",
-      "APIs, plataformas de negocio y software en producción",
+      "Full-Stack Engineer especializado en React, .NET y Flutter",
+      "Frontend con Vite y Next.js; backend enterprise y open source",
       "Arquitectura limpia, producto y ejecución real"
     ],
-    "summary": "Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio, mobile con Flutter y plataformas geoespaciales, construyendo software confiable para entornos reales.",
+    "summary": "Full-Stack Engineer con foco en React, Vite, TypeScript y Next.js para frontend; .NET + SQL Server para backend enterprise; NestJS + PostgreSQL para backend open source; y Flutter para mobile.",
     "featuredFocus": [
-      "REST APIs y backend en producción",
-      "Frontend con React, Angular y Flutter para flujos operativos reales",
-      "Modernización de sistemas legacy con criterio técnico"
+      "Frontend principal con React, Vite, TypeScript y Next.js",
+      "Backend enterprise con .NET y SQL Server",
+      "Backend open source con NestJS, PostgreSQL y Flutter para mobile"
     ]
   }
 }

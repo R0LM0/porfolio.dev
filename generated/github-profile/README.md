@@ -1,11 +1,11 @@
 <!-- Generated from porfolio.dev source -->
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=20&duration=2800&pause=1200&center=true&vCenter=true&width=920&lines=Full-Stack%20Engineer%20especializado%20en%20.NET%2C%20React%20y%20Flutter;APIs%2C%20plataformas%20de%20negocio%20y%20software%20en%20producci%C3%B3n;Arquitectura%20limpia%2C%20producto%20y%20ejecuci%C3%B3n%20real" alt="Typing intro for Lenin Gilberto Osorio Martinez" />
+  <img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=20&duration=2800&pause=1200&center=true&vCenter=true&width=920&lines=Full-Stack%20Engineer%20especializado%20en%20React%2C%20.NET%20y%20Flutter;Frontend%20con%20Vite%20y%20Next.js%3B%20backend%20enterprise%20y%20open%20source;Arquitectura%20limpia%2C%20producto%20y%20ejecuci%C3%B3n%20real" alt="Typing intro for Lenin Gilberto Osorio Martinez" />
 </div>
 
 <h1 align="center">Hola, soy r0lm0</h1>
 <p align="center"><strong>Full-Stack Engineer con foco en .NET, frontend, mobile y arquitectura de producto</strong></p>
-<p align="center">Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio, mobile con Flutter y plataformas geoespaciales, construyendo software confiable para entornos reales.</p>
+<p align="center">Full-Stack Engineer con foco en React, Vite, TypeScript y Next.js para frontend; .NET + SQL Server para backend enterprise; NestJS + PostgreSQL para backend open source; y Flutter para mobile.</p>
 
 <div align="center">
   <a href="https://r0lm0.dev"><img src="https://img.shields.io/badge/Portfolio-111827?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio badge" /></a>
@@ -20,14 +20,14 @@
   <tr>
     <td width="56%" valign="top">
       <strong>Qué construyo</strong><br /><br />
-      • REST APIs y backend en producción<br />• Frontend con React, Angular y Flutter para flujos operativos reales<br />• Modernización de sistemas legacy con criterio técnico
+      • Frontend principal con React, Vite, TypeScript y Next.js<br />• Backend enterprise con .NET y SQL Server<br />• Backend open source con NestJS, PostgreSQL y Flutter para mobile
       <br /><br />
       <strong>Snapshot profesional</strong><br /><br />
       • Especializado en .NET, backend escalable y software de negocio en producción.<br />• Experiencia entregando REST APIs, frontend de operaciones y soluciones para sector público y privado.<br />• Cómodo modernizando sistemas legacy, afinando rendimiento y resolviendo autenticación, seguridad y diseño de datos.
     </td>
     <td width="44%" valign="top">
       <strong>Ahora mismo</strong><br /><br />
-      **Enfoque:** Frontend architecture · Product-oriented engineering · Enterprise applications · API design<br /><br />**Aprendiendo:** Cloud architecture · Microservices · DevOps<br /><br />**Preguntame sobre:** TypeScript · Astro · React · NestJS · .NET · Flutter · Android
+      **Enfoque:** Frontend architecture · Product-oriented engineering · Enterprise applications · API design<br /><br />**Aprendiendo:** Cloud architecture · Microservices · DevOps<br /><br />**Preguntame sobre:** React · Vite · TypeScript · Next.js · Flutter · NestJS · .NET
     </td>
   </tr>
 </table>
@@ -35,25 +35,11 @@
 ## Stack principal
 
 ### Frontend
-Interfaces rápidas, legibles y mantenibles, con foco en arquitectura y experiencia de usuario.
+Interfaces de producto con React, Vite, TypeScript y Next.js, priorizando velocidad, claridad y mantenibilidad.
 
-<img src="https://skillicons.dev/icons?i=vite,react,angular,ts,astro,tailwind,html,css&theme=dark" alt="Frontend icons" />
+<img src="https://skillicons.dev/icons?i=react,vite,ts,astro,tailwind,html,css&theme=dark" alt="Frontend icons" />
 
-`Vite` `React` `Angular` `TypeScript` `Astro` `Tailwind CSS` `HTML` `CSS`
-
-### Backend
-Servicios, autenticación y diseño robusto para productos que necesitan crecer sin romperse.
-
-<img src="https://skillicons.dev/icons?i=dotnet,nestjs,postman&theme=dark" alt="Backend icons" />
-
-`.NET 8/9` `ASP.NET Core` `NestJS` `REST APIs` `JWT` `Cookies` `WebSockets`
-
-### Data & Infra
-Persistencia, despliegue y operación en entornos reales con foco en estabilidad y rendimiento.
-
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,cloudflare,docker,git,githubactions,windows&theme=dark" alt="Data &amp; Infra icons" />
-
-`PostgreSQL` `MySQL` `SQL Server` `Cloudflare` `Docker` `Git` `CI/CD` `IIS`
+`React` `Vite` `TypeScript` `Next.js` `Astro` `Tailwind CSS` `HTML` `CSS`
 
 ## Experiencia reciente
 

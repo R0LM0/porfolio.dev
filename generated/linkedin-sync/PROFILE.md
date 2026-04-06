@@ -6,7 +6,7 @@
 
 ## About
 
-Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplicaciones de negocio, mobile con Flutter y plataformas geoespaciales, construyendo software confiable para entornos reales. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
+Full-Stack Engineer con foco en React, Vite, TypeScript y Next.js para frontend; .NET + SQL Server para backend enterprise; NestJS + PostgreSQL para backend open source; y Flutter para mobile. Trabajo con criterio técnico, rendimiento y mantenimiento a largo plazo para construir productos claros, confiables y bien resueltos. Trabajo desde Managua, Nicaragua, con foco en calidad, arquitectura, APIs y experiencia de usuario.
 
 ## Short summary
 
@@ -39,34 +39,33 @@ Full-Stack Engineer con experiencia en .NET, sistemas backend escalables, aplica
 
 ## Skills to highlight
 
-- TypeScript
-- Astro
 - React
+- Vite
+- TypeScript
+- Next.js
+- Flutter
 - NestJS
 - .NET
-- Flutter
-- Android
-- Vite
-- Angular
+- Astro
 - Tailwind CSS
 - HTML
 - CSS
 - Dart
+- Android
 - Offline-first
 - .NET 8/9
 - ASP.NET Core
-- REST APIs
+- SQL Server
+- IIS
 - JWT
 - Cookies
-- WebSockets
+- REST APIs
 - PostgreSQL
-- MySQL
-- SQL Server
-- Cloudflare
 - Docker
+- Cloudflare
 - Git
 - CI/CD
-- IIS
+- WebSockets
 
 ## Suggested links
 

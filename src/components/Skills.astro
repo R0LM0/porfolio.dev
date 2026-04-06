@@ -24,7 +24,7 @@ const tones = [
             <div class="flex items-start justify-between gap-4">
               <div>
                 <p class="text-xs font-semibold uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">
-                  Stack principal
+                  Pilares técnicos
                 </p>
                 <h3 class="mt-2 text-2xl font-semibold text-slate-900 dark:text-white">
                   {group.title}
@@ -42,11 +42,12 @@ const tones = [
             <div class="relative mt-6 grid grid-cols-4 gap-3">
               {
                 featured.map((item) => (
-                  <div class="flex flex-col items-center gap-2 rounded-2xl border border-black/10 bg-white/70 px-3 py-4 text-center shadow-sm dark:border-white/10 dark:bg-white/5">
+                  <div
+                    class="flex items-center justify-center rounded-2xl border border-black/10 bg-white/70 px-3 py-4 text-center shadow-sm dark:border-white/10 dark:bg-white/5"
+                    aria-label={item}
+                    title={item}
+                  >
                     <SkillGlyph label={item} class="size-10" />
-                    <span class="text-[0.72rem] font-medium leading-4 text-slate-700 dark:text-slate-200">
-                      {item}
-                    </span>
                   </div>
                 ))
               }
