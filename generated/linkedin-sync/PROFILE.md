@@ -19,19 +19,19 @@ Full-Stack Engineer con foco en React, Vite, TypeScript y Next.js para frontend;
 
 ## Experience
 
-### Systems Project Specialist · ENACAL
+### Especialista en Proyectos de Sistemas · ENACAL
 - Período: Julio 2024 - Actualidad
 - Ubicación: Managua, Nicaragua
 - Resumen: Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.
 - Stack: .NET 8/9, REST APIs, JWT, React, Tailwind CSS, IIS
 
-### System Programmer Analyst · FISE
+### Analista Programador de Sistemas · FISE
 - Período: Marzo 2019 - Junio 2024
 - Ubicación: Managua, Nicaragua
 - Resumen: Trabajé en sistemas institucionales de inventario, seguimiento de proyectos y reportes, usando .NET Core, Angular, React, PostgreSQL, GeoServer y mejoras sobre flujos documentales reales.
 - Stack: .NET Core, Angular, React, PostgreSQL, GeoServer, RDLC
 
-### Summer Intern · FISE
+### Pasante de Verano · FISE
 - Período: Octubre 2018 - Febrero 2019
 - Ubicación: Managua, Nicaragua
 - Resumen: Desarrollé módulos sobre .NET Framework con MVC, migré reportes a RDLC y participé en mejoras para subsistemas administrativos internos.

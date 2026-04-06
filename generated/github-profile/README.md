@@ -48,7 +48,7 @@ Interfaces de producto con React, Vite, TypeScript y Next.js, priorizando veloci
   <tr>
     <td width="22"><strong>▹</strong></td>
     <td>
-      <strong>Systems Project Specialist</strong><br />
+      <strong>Especialista en Proyectos de Sistemas</strong><br />
       <sub>ENACAL · Julio 2024 - Actualidad · Managua, Nicaragua</sub><br />
       Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.
     </td>
@@ -59,7 +59,7 @@ Interfaces de producto con React, Vite, TypeScript y Next.js, priorizando veloci
   <tr>
     <td width="22"><strong>▹</strong></td>
     <td>
-      <strong>System Programmer Analyst</strong><br />
+      <strong>Analista Programador de Sistemas</strong><br />
       <sub>FISE · Marzo 2019 - Junio 2024 · Managua, Nicaragua</sub><br />
       Trabajé en sistemas institucionales de inventario, seguimiento de proyectos y reportes, usando .NET Core, Angular, React, PostgreSQL, GeoServer y mejoras sobre flujos documentales reales.
     </td>
@@ -70,7 +70,7 @@ Interfaces de producto con React, Vite, TypeScript y Next.js, priorizando veloci
   <tr>
     <td width="22"><strong>▹</strong></td>
     <td>
-      <strong>Summer Intern</strong><br />
+      <strong>Pasante de Verano</strong><br />
       <sub>FISE · Octubre 2018 - Febrero 2019 · Managua, Nicaragua</sub><br />
       Desarrollé módulos sobre .NET Framework con MVC, migré reportes a RDLC y participé en mejoras para subsistemas administrativos internos.
     </td>

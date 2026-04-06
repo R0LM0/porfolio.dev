@@ -83,7 +83,7 @@
   "experience": [
     {
       "company": "ENACAL",
-      "role": "Systems Project Specialist",
+      "role": "Especialista en Proyectos de Sistemas",
       "period": "Julio 2024 - Actualidad",
       "location": "Managua, Nicaragua",
       "summary": "Diseñé e implementé APIs en .NET 8 y .NET 9 para sistemas operativos, autenticación con JWT y cookies, repositorios reutilizables y frontend con React para casos de uso productivos.",
@@ -98,7 +98,7 @@
     },
     {
       "company": "FISE",
-      "role": "System Programmer Analyst",
+      "role": "Analista Programador de Sistemas",
       "period": "Marzo 2019 - Junio 2024",
       "location": "Managua, Nicaragua",
       "summary": "Trabajé en sistemas institucionales de inventario, seguimiento de proyectos y reportes, usando .NET Core, Angular, React, PostgreSQL, GeoServer y mejoras sobre flujos documentales reales.",
@@ -113,7 +113,7 @@
     },
     {
       "company": "FISE",
-      "role": "Summer Intern",
+      "role": "Pasante de Verano",
       "period": "Octubre 2018 - Febrero 2019",
       "location": "Managua, Nicaragua",
       "summary": "Desarrollé módulos sobre .NET Framework con MVC, migré reportes a RDLC y participé en mejoras para subsistemas administrativos internos.",
