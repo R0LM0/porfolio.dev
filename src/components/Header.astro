@@ -8,19 +8,20 @@ import { navigation } from "@/data/portfolio";
 >
   <nav
     id="header-nav"
-    class="flex items-center justify-center gap-1 rounded-full border border-slate-200/90 bg-white/92 px-2 py-1 text-sm font-medium text-slate-600 shadow-[0_10px_30px_rgba(15,23,42,0.08)] backdrop-blur-md transition-colors dark:border-slate-700/60 dark:bg-slate-900/82 dark:text-slate-300 dark:shadow-[0_16px_36px_rgba(0,0,0,0.28)]"
+    class="flex items-center justify-center gap-1 rounded-full border border-slate-300/90 bg-white px-2 py-1 text-sm font-medium text-slate-700 shadow-[0_16px_38px_rgba(15,23,42,0.14)] ring-1 ring-black/5 backdrop-blur-md transition-colors dark:border-slate-700/60 dark:bg-slate-900/82 dark:text-slate-300 dark:shadow-[0_16px_36px_rgba(0,0,0,0.28)] dark:ring-0"
   >
     {
       navigation.map((link) => (
         <a
           class:list={[
-            "relative block rounded-full px-3 py-2 transition-colors duration-200 outline-none",
+            "relative block rounded-full px-3 py-2 transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-sky-500/35 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-950",
             link.label === "r0lm0"
-              ? "font-semibold text-slate-950 hover:bg-slate-950/5 hover:text-slate-950 focus-visible:bg-slate-950/5 focus-visible:text-slate-950 dark:text-white dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:bg-white/10 dark:focus-visible:text-white"
-              : "text-slate-600 hover:bg-slate-100 hover:text-slate-950 focus-visible:bg-slate-100 focus-visible:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:bg-white/10 dark:focus-visible:text-white",
+              ? "font-semibold text-white bg-slate-950 shadow-[0_10px_22px_rgba(15,23,42,0.22)] hover:bg-slate-900 hover:text-white focus-visible:bg-slate-900 focus-visible:text-white dark:bg-white dark:text-slate-950 dark:hover:bg-slate-100 dark:hover:text-slate-950 dark:focus-visible:bg-slate-100 dark:focus-visible:text-slate-950"
+              : "text-slate-700 hover:bg-slate-100 hover:text-slate-950 focus-visible:bg-slate-100 focus-visible:text-slate-950 dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white dark:focus-visible:bg-white/10 dark:focus-visible:text-white",
           ]}
           data-brand={link.label === "r0lm0" ? "true" : undefined}
           aria-label={link.label.toLowerCase()}
+          aria-current="false"
           data-section={link.href.includes("#") ? link.href.split("#")[1] : undefined}
           href={link.href}
         >
@@ -38,16 +39,19 @@ import { navigation } from "@/data/portfolio";
     const navItems = document.querySelectorAll<HTMLAnchorElement>("header nav a")
 
     const activeClasses = [
-      "bg-sky-500/10",
-      "text-sky-700",
-      "dark:bg-sky-400/10",
-      "dark:text-sky-300",
+      "bg-sky-600",
+      "text-white",
+      "shadow-[0_10px_22px_rgba(2,132,199,0.28)]",
+      "dark:bg-sky-400",
+      "dark:text-slate-950",
+      "dark:shadow-[0_10px_22px_rgba(56,189,248,0.28)]",
     ]
 
     const inactiveClasses = [
       "bg-transparent",
-      "text-slate-600",
+      "text-slate-700",
       "dark:text-slate-300",
+      "shadow-none",
     ]
 
     const callback = (entries: IntersectionObserverEntry[]) => {
@@ -60,7 +64,7 @@ import { navigation } from "@/data/portfolio";
 
             item.classList.remove(...activeClasses, ...inactiveClasses)
             item.classList.add(...(isActive ? activeClasses : inactiveClasses))
-            item.setAttribute("aria-current", isActive ? "true" : "false")
+            item.setAttribute("aria-current", isActive ? "page" : "false")
           })
         }
       })
