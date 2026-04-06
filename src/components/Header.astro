@@ -8,17 +8,12 @@ import { navigation } from "@/data/portfolio";
 >
   <nav
     id="header-nav"
-    class="flex items-center justify-center gap-1 rounded-full px-2 py-1 text-sm font-medium backdrop-blur-md transition-colors"
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       navigation.map((link) => (
         <a
-          class:list={[
-            "header-nav-link relative block rounded-full border border-transparent px-3 py-2 outline-none transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sky-500/35 focus-visible:ring-offset-2",
-            link.label === "r0lm0" ? "header-nav-brand font-semibold" : "",
-          ]}
-          data-brand={link.label === "r0lm0" ? "true" : undefined}
-          data-nav-link="true"
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
           aria-label={link.label.toLowerCase()}
           data-section={link.href.includes("#") ? link.href.split("#")[1] : undefined}
           href={link.href}
@@ -34,60 +29,34 @@ import { navigation } from "@/data/portfolio";
 <script>
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll<HTMLAnchorElement>("header nav a")
-    const headerNav = document.getElementById("header-nav")
-    const sectionState = new Map<string, number>()
-    let activeSectionId = "home"
-
-    const updateIslandState = () => {
-      headerNav?.toggleAttribute("data-scrolled", window.scrollY > 12)
-    }
-
-    const syncActiveNav = () => {
-      const currentSectionId = Array.from(sectionState.entries())
-        .sort((a, b) => b[1] - a[1])[0]?.[0]
-
-      if (currentSectionId != null) {
-        activeSectionId = currentSectionId
-      }
-
-      navItems.forEach((item) => {
-        const targetSection = item.getAttribute("data-section")
-        const isActive = targetSection === activeSectionId
-
-        item.toggleAttribute("data-active", isActive)
-        item.setAttribute("aria-current", isActive ? "page" : "false")
-      })
-    }
+    const navItems = document.querySelectorAll("header nav a")
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        const sectionId = entry.target.id.toLowerCase()
-
         if (entry.isIntersecting) {
-          sectionState.set(sectionId, entry.intersectionRatio)
-        } else {
-          sectionState.delete(sectionId)
+          navItems.forEach((item) => {
+            const targetSection = item.getAttribute("data-section")
+            const sectionId = entry.target.id.toLowerCase()
+
+            if (targetSection === sectionId) {
+              item.classList.add("text-blue-500")
+            } else {
+              item.classList.remove("text-blue-500")
+            }
+          })
         }
       })
-
-      syncActiveNav()
     }
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "-18% 0px -52% 0px",
-      threshold: [0.2, 0.4, 0.6, 0.8],
+      rootMargin: "0px",
+      threshold: 0.3,
     })
-
-    updateIslandState()
-    window.addEventListener("scroll", updateIslandState, { passive: true })
 
     sections.forEach((section) => {
       observer.observe(section)
     })
-
-    syncActiveNav()
 
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
