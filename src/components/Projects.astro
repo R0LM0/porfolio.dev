@@ -17,91 +17,120 @@ const getPreviewLabel = (href: string | undefined, title: string) => {
 };
 ---
 
-<div class="flex flex-col gap-y-16">
-  {
-    projects.map(({ image, imageAlt, title, description, outcome, stack, href, repo }, index) => (
-      <article class="flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
-        <div class="w-full md:w-1/2">
-          {
-            isRasterPreview(image) ? (
-              <a
-                aria-label={`Abrir preview de ${title}`}
-                class="block overflow-hidden rounded-[1.35rem] border border-slate-200/80 bg-[#0b0b0f] shadow-[0_18px_50px_-30px_rgba(15,23,42,0.42)] transition-colors duration-300 dark:border-white/10 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.88)]"
-                href={href ?? image}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <div class="flex items-center justify-between border-b border-white/10 bg-white/5 px-4 py-3 text-xs font-medium text-white/70">
-                  <div class="flex items-center gap-2" aria-hidden="true">
-                    <span class="size-2.5 rounded-full bg-rose-400/90"></span>
-                    <span class="size-2.5 rounded-full bg-amber-300/90"></span>
-                    <span class="size-2.5 rounded-full bg-emerald-400/90"></span>
+<div class="relative">
+  <div class="projects-scrollable flex flex-col gap-y-16 lg:max-h-[calc(100vh-11rem)] lg:overflow-y-auto lg:pr-4 lg:overscroll-contain lg:snap-y lg:snap-mandatory lg:[scrollbar-gutter:stable]">
+    {
+      projects.map(({ image, imageAlt, title, description, outcome, stack, href, repo }, index) => (
+        <article class="flex flex-col gap-8 md:flex-row md:items-start md:gap-10 lg:snap-start">
+          <div class="w-full md:w-1/2">
+            {
+              isRasterPreview(image) ? (
+                <a
+                  aria-label={`Abrir preview de ${title}`}
+                  class="block overflow-hidden rounded-[1.35rem] border border-slate-200/80 bg-[#0b0b0f] shadow-[0_18px_50px_-30px_rgba(15,23,42,0.42)] transition-colors duration-300 dark:border-white/10 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.88)]"
+                  href={href ?? image}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div class="flex items-center justify-between border-b border-white/10 bg-white/5 px-4 py-3 text-xs font-medium text-white/70">
+                    <div class="flex items-center gap-2" aria-hidden="true">
+                      <span class="size-2.5 rounded-full bg-rose-400/90"></span>
+                      <span class="size-2.5 rounded-full bg-amber-300/90"></span>
+                      <span class="size-2.5 rounded-full bg-emerald-400/90"></span>
+                    </div>
+                    <span class="truncate">{getPreviewLabel(href, title)}</span>
+                    <span class="text-[11px] uppercase tracking-[0.24em] text-white/45">Live</span>
                   </div>
-                  <span class="truncate">{getPreviewLabel(href, title)}</span>
-                  <span class="text-[11px] uppercase tracking-[0.24em] text-white/45">Live</span>
+                  <img
+                    alt={imageAlt}
+                    class="h-56 w-full object-cover object-top sm:h-[22rem]"
+                    decoding="async"
+                    fetchpriority={index === 0 ? "high" : "auto"}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    src={image}
+                  />
+                </a>
+              ) : (
+                <div class="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-[0_18px_50px_-30px_rgba(15,23,42,0.18)] transition-colors duration-300 dark:border-white/10 dark:bg-slate-950 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.72)]">
+                  <img
+                    alt={imageAlt}
+                    class="h-56 w-full object-cover object-center sm:h-[22rem]"
+                    decoding="async"
+                    loading="lazy"
+                    src={image}
+                  />
                 </div>
-                <img
-                  alt={imageAlt}
-                  class="h-56 w-full object-cover object-top sm:h-[22rem]"
-                  decoding="async"
-                  fetchpriority={index === 0 ? "high" : "auto"}
-                  loading={index === 0 ? "eager" : "lazy"}
-                  src={image}
-                />
-              </a>
-            ) : (
-              <div class="overflow-hidden rounded-[1.35rem] border border-slate-200 bg-white shadow-[0_18px_50px_-30px_rgba(15,23,42,0.18)] transition-colors duration-300 dark:border-white/10 dark:bg-slate-950 dark:shadow-[0_18px_50px_-30px_rgba(2,6,23,0.72)]">
-                <img
-                  alt={imageAlt}
-                  class="h-56 w-full object-cover object-center sm:h-[22rem]"
-                  decoding="async"
-                  loading="lazy"
-                  src={image}
-                />
-              </div>
-            )
-          }
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-            {title}
-          </h3>
-          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{stack.slice(0, 3).join(" · ")}</p>
-          <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-y-2">
-              {stack.slice(0, 3).map((tag) => (
-                <li>
-                  <span
-                    class="flex gap-x-2 rounded-full text-xs bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-white py-1 px-2 border border-gray-200 dark:border-gray-700"
-                  >
-                    {tag}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              <p>{description}</p>
-              <p class="mt-3">{outcome}</p>
-            </div>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {repo && (
-                <LinkButton href={repo}>
-                  <GitHubIcon class="size-6" />
-                  Code
-                </LinkButton>
-              )}
-              {href && (
-                <LinkButton href={href}>
-                  <LinkIcon class="size-4" />
-                  Preview
-                </LinkButton>
-              )}
-            </footer>
+              )
+            }
           </div>
-        </div>
-      </article>
-    ))
-  }
+
+          <div class="w-full md:w-1/2 md:max-w-lg">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              {title}
+            </h3>
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{stack.slice(0, 3).join(" · ")}</p>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row mb-2 gap-x-2 flex-wrap gap-y-2">
+                {stack.slice(0, 3).map((tag) => (
+                  <li>
+                    <span
+                      class="flex gap-x-2 rounded-full text-xs bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-white py-1 px-2 border border-gray-200 dark:border-gray-700"
+                    >
+                      {tag}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">
+                <p>{description}</p>
+                <p class="mt-3">{outcome}</p>
+              </div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {repo && (
+                  <LinkButton href={repo}>
+                    <GitHubIcon class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {href && (
+                  <LinkButton href={href}>
+                    <LinkIcon class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <style is:global>
+    .projects-scrollable {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(100, 116, 139, 0.45) transparent;
+    }
+
+    .projects-scrollable::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .projects-scrollable::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .projects-scrollable::-webkit-scrollbar-thumb {
+      border-radius: 9999px;
+      background: rgba(100, 116, 139, 0.35);
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    .projects-scrollable::-webkit-scrollbar-thumb:hover {
+      background: rgba(59, 130, 246, 0.45);
+      background-clip: content-box;
+    }
+  </style>
 </div>

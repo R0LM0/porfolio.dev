@@ -200,7 +200,24 @@
       ],
       "image": "/images/projects/project-advanced-repository-library.svg",
       "imageAlt": "Ilustración de la librería Advanced Repository Library",
-      "repo": "https://github.com/R0LM0/Repo.git"
+      "repo": "https://github.com/R0LM0/Repo"
+    },
+    {
+      "title": "Giffy",
+      "period": "2026",
+      "description": "Buscador profesional de GIFs con React y la API de Giphy, con infinite scroll, skeleton loading y dark mode.",
+      "outcome": "Construí una experiencia rápida y cómoda para explorar GIFs con carga progresiva, navegación fluida y una UI pensada para uso real.",
+      "stack": [
+        "React",
+        "Giphy API",
+        "Infinite Scroll",
+        "Skeleton Loading",
+        "Dark Mode"
+      ],
+      "image": "/images/projects/giffy-preview.png",
+      "imageAlt": "Captura del proyecto Giffy",
+      "href": "https://giffy-jade-chi.vercel.app/",
+      "repo": "https://github.com/R0LM0/giffy"
     }
   ],
   "skillGroups": [
