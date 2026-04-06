@@ -14,7 +14,7 @@ import { navigation } from "@/data/portfolio";
       navigation.map((link) => (
         <a
           class:list={[
-            "header-nav-link relative block rounded-full px-3 py-2 outline-none transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sky-500/35 focus-visible:ring-offset-2",
+            "header-nav-link relative block rounded-full border border-transparent px-3 py-2 outline-none transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sky-500/35 focus-visible:ring-offset-2",
             link.label === "r0lm0" ? "header-nav-brand font-semibold" : "",
           ]}
           data-brand={link.label === "r0lm0" ? "true" : undefined}

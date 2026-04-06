@@ -134,7 +134,8 @@ const { description, title } = Astro.props;
       html:not(.dark) #header-nav a[data-nav-link][data-active="true"] {
         background: rgb(37, 99, 235);
         color: rgb(255, 255, 255);
-        box-shadow: 0 10px 22px rgba(37, 99, 235, 0.3);
+        border-color: rgba(37, 99, 235, 0.75);
+        box-shadow: 0 10px 22px rgba(37, 99, 235, 0.34);
       }
 
       html:not(.dark) #header-nav a[data-nav-link][data-brand="true"] {
@@ -153,9 +154,10 @@ const { description, title } = Astro.props;
       }
 
       html.dark #header-nav a[data-nav-link][data-active="true"] {
-        background: rgba(56, 189, 248, 0.12);
-        color: rgb(125, 211, 252);
-        box-shadow: none;
+        background: rgba(56, 189, 248, 0.22);
+        color: rgb(240, 249, 255);
+        border-color: rgba(125, 211, 252, 0.38);
+        box-shadow: 0 10px 22px rgba(2, 132, 199, 0.18);
       }
 
       html.dark #header-nav a[data-nav-link][data-brand="true"] {
