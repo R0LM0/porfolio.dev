@@ -36,6 +36,7 @@ import { navigation } from "@/data/portfolio";
     const sections = document.querySelectorAll("section")
     const navItems = document.querySelectorAll<HTMLAnchorElement>("header nav a")
     const headerNav = document.getElementById("header-nav")
+    const sectionState = new Map<string, number>()
 
     const updateScrolledState = () => {
       headerNav?.toggleAttribute("data-scrolled", window.scrollY > 12)
@@ -44,25 +45,37 @@ import { navigation } from "@/data/portfolio";
     updateScrolledState()
     window.addEventListener("scroll", updateScrolledState, { passive: true })
 
+    const syncActiveNav = () => {
+      const activeSectionId = Array.from(sectionState.entries())
+        .sort((a, b) => b[1] - a[1])[0]?.[0]
+
+      navItems.forEach((item) => {
+        const targetSection = item.getAttribute("data-section")
+        const isActive = targetSection === activeSectionId
+
+        item.toggleAttribute("data-active", isActive)
+        item.setAttribute("aria-current", isActive ? "page" : "false")
+      })
+    }
+
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            const targetSection = item.getAttribute("data-section")
-            const sectionId = entry.target.id.toLowerCase()
-            const isActive = targetSection === sectionId
+        const sectionId = entry.target.id.toLowerCase()
 
-            item.toggleAttribute("data-active", isActive)
-            item.setAttribute("aria-current", isActive ? "page" : "false")
-          })
+        if (entry.isIntersecting) {
+          sectionState.set(sectionId, entry.intersectionRatio)
+        } else {
+          sectionState.delete(sectionId)
         }
       })
+
+      syncActiveNav()
     }
 
     const observer = new IntersectionObserver(callback, {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
+      rootMargin: "-18% 0px -52% 0px",
+      threshold: [0.2, 0.4, 0.6, 0.8],
     })
 
     sections.forEach((section) => {
