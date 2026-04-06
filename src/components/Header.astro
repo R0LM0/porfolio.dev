@@ -35,6 +35,14 @@ import { navigation } from "@/data/portfolio";
   document.addEventListener("astro:page-load", () => {
     const sections = document.querySelectorAll("section")
     const navItems = document.querySelectorAll<HTMLAnchorElement>("header nav a")
+    const headerNav = document.getElementById("header-nav")
+
+    const updateScrolledState = () => {
+      headerNav?.toggleAttribute("data-scrolled", window.scrollY > 12)
+    }
+
+    updateScrolledState()
+    window.addEventListener("scroll", updateScrolledState, { passive: true })
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
